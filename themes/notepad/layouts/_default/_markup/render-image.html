@@ -1,0 +1,11 @@
+{{ $image := .Page.Resources.GetMatch .Destination }}
+{{ if $image }}
+  {{ $small := $image.Resize "400x webp" }}
+  {{ $medium := $image.Resize "800x webp" }}
+  {{ $large := $image.Resize "1200x webp" }}
+  <img src="{{ $medium.RelPermalink }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} loading="lazy"
+       srcset="{{ $small.RelPermalink }} 400w, {{ $medium.RelPermalink }} 800w, {{ $large.RelPermalink }} 1200w"
+       sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px" />
+{{ else }}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} loading="lazy" />
+{{ end }}
