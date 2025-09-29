@@ -11,4 +11,3 @@ Ou me siga nas redes:
 - Instagram: [@heric_camargo](https://instagram.com/heric_camargo)
 - Twitter: [@herijooj](https://twitter.com/herijooj)
 - Letterboxd: [HericCamargo](https://letterboxd.com/HericCamargo/)
-

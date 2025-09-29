@@ -11,5 +11,4 @@ Já fiz parte do Laboratório de Meteorologia da UFPR como bolsista de Iniciaç�
 
 Gosto de computação, de automatizar coisas e de arrumar coisas até quebrar elas.
 
-Você pode encontrar mais sobre mim na seção [Contato]({{< relref "/contato" >}}).
-
+Você pode encontrar mais sobre mim na seção [Contato]({{< relref "/contact" >}}).

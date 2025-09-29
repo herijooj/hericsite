@@ -1,10 +1,10 @@
 baseURL = "/"
-languageCode = "pt-br"
-title = "Site do Heric"
+languageCode = "en"
+title = "Heric's Site"
 theme = "notepad"
 enableRobotsTXT = true
 
-defaultContentLanguage = "pt-br"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
 relativeURLs = true
@@ -18,50 +18,11 @@ canonifyURLs = false
 
 [languages]
 
-  [languages.pt-br]
-    languageCode = "pt-br"
-    languageName = "Português"
-    weight = 1
-    title = "Site do Heric"
-    contentDir = "content/pt-br"
-
-    [languages.pt-br.menu]
-      [[languages.pt-br.menu.main]]
-        name = "Casa"
-        url = "/"
-        weight = 10
-
-      [[languages.pt-br.menu.main]]
-        name = "Fotos"
-        url = "/fotos/"
-        weight = 20
-
-      [[languages.pt-br.menu.main]]
-        name = "Sobre"
-        url = "/sobre/"
-        weight = 30
-
-      [[languages.pt-br.menu.main]]
-        name = "Posts"
-        url = "/posts/"
-        weight = 40
-
-      [[languages.pt-br.menu.main]]
-        name = "Projetos"
-        url = "/projetos/"
-        weight = 50
-
-      [[languages.pt-br.menu.main]]
-        name = "Contato"
-        url = "/contato/"
-        weight = 60
-
   [languages.en]
     languageCode = "en-us"
     languageName = "English"
-    weight = 2
+    weight = 1
     title = "Heric's Site"
-    contentDir = "content/en"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
@@ -91,5 +52,42 @@ canonifyURLs = false
 
       [[languages.en.menu.main]]
         name = "Contact"
+        url = "/contact/"
+        weight = 60
+
+  [languages.pt-br]
+    languageCode = "pt-br"
+    languageName = "Português"
+    weight = 2
+    title = "Site do Heric"
+
+    [languages.pt-br.menu]
+      [[languages.pt-br.menu.main]]
+        name = "Casa"
+        url = "/"
+        weight = 10
+
+      [[languages.pt-br.menu.main]]
+        name = "Fotos"
+        url = "/photos/"
+        weight = 20
+
+      [[languages.pt-br.menu.main]]
+        name = "Sobre"
+        url = "/about/"
+        weight = 30
+
+      [[languages.pt-br.menu.main]]
+        name = "Posts"
+        url = "/posts/"
+        weight = 40
+
+      [[languages.pt-br.menu.main]]
+        name = "Projetos"
+        url = "/projects/"
+        weight = 50
+
+      [[languages.pt-br.menu.main]]
+        name = "Contato"
         url = "/contact/"
         weight = 60
