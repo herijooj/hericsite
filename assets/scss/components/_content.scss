@@ -1,0 +1,34 @@
+#main p {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: justify;
+}
+
+#main p:first-of-type {
+  text-align: left;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#main a {
+  text-decoration: underline;
+  color: $color-link;
+}
+
+#main a:hover,
+#main a:focus {
+  text-decoration: none;
+  color: $color-link-hover;
+}
+
+#main h1 {
+  font-family: $font-heading;
+  font-size: 13px;
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+}

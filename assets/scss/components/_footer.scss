@@ -1,0 +1,43 @@
+#footer {
+  height: 40px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0;
+  text-align: center;
+  font-size: 9px;
+  color: $color-footer-text;
+  background:
+    url(../images/footer-left.png) no-repeat left top,
+    url(../images/footer-right.png) no-repeat right top,
+    url(../images/footer-center.png) repeat-x center top;
+}
+
+
+#footer a,
+#footer a:visited,
+#footer a:hover,
+#footer a:focus {
+  font-size: 9px;
+  display: inline-block;
+  color: #333333; /* match copyright color for readability */
+  text-decoration: none;
+  transform: translateY(-4px);
+  line-height: 1;
+}
+
+#footer a:hover,
+#footer a:focus {
+  color: $color-footer-hover;
+}
+
+/* Make the copyright slightly higher and darker for better contrast */
+#footer > span {
+  display: inline-block;
+  color: #333333; /* dark gray for readability */
+  transform: translateY(-4px);
+  line-height: 1;
+}

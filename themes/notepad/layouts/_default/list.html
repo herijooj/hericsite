@@ -1,0 +1,22 @@
+{{ define "main" }}
+    {{ .Content }}
+    
+    {{ if .Pages }}
+        <ul class="simple-post-list">
+            {{ range .Pages }}
+                <li>
+                    <a href="{{ .Permalink }}" class="simple-post-link">{{ .Title }}</a>
+                    {{ if .Date }}
+                        <small style="color: #666; margin-left: 10px;">
+                            ({{ .Date.Format "02/01/2006" }})
+                        </small>
+                    {{ end }}
+                </li>
+            {{ end }}
+        </ul>
+    {{ else }}
+        {{ if not .Content }}
+            <p>Nenhum conteúdo encontrado nesta seção.</p>
+        {{ end }}
+    {{ end }}
+{{ end }}

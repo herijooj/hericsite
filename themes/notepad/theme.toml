@@ -1,0 +1,12 @@
+name = "Notepad"
+license = "MIT"
+licenselink = "https://github.com/your-username/notepad-theme/blob/main/LICENSE"
+description = "A Hugo theme that mimics the classic Windows Notepad interface"
+homepage = "https://github.com/your-username/notepad-theme"
+tags = ["retro", "windows", "notepad", "classic"]
+features = ["responsive"]
+min_version = "0.41.0"
+
+[author]
+  name = "Heric Camargo"
+  homepage = "/"

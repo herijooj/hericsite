@@ -1,0 +1,11 @@
+[[translation]]
+id = "footer.builtWithHugo"
+translation = "Built with Hugo"
+
+[[translation]]
+id = "titlebar.homeLabel"
+translation = "Home"
+
+[[translation]]
+id = "navigation.switchToLanguage"
+translation = "Switch to {{ .language }}"

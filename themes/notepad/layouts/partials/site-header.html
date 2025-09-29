@@ -1,0 +1,16 @@
+{{ $site := .Site }}
+{{ $baseTitle := cond (or (eq .Title "") .IsHome) $site.Title .Title }}
+{{/* Localize the default titlebar label for the home page. */}}
+{{ $homeLabelRaw := i18n "titlebar.homeLabel" }}
+{{ $homeLabel := $homeLabelRaw }}
+{{ if or (eq $homeLabelRaw "") (eq $homeLabelRaw "titlebar.homeLabel") }}
+    {{ $fallbackTitle := cond (eq .Title "") $site.Title .Title }}
+    {{ $homeLabel = $fallbackTitle }}
+{{ end }}
+{{ $defaultTitle := cond .IsHome (printf "%s - %s.txt - Notepad" $homeLabel $site.Title) (printf "%s - %s.txt - Notepad" $baseTitle $site.Title) }}
+{{ $titlebarText := or .Params.titlebar $defaultTitle }}
+<div id="titlebar">
+    <h1>{{ $titlebarText }}</h1>
+</div>
+
+{{ partial "navigation.html" . }}

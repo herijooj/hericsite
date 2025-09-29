@@ -1,0 +1,32 @@
+#main ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+#main ul li {
+  margin-bottom: 5px;
+}
+
+.simple-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.simple-post-list li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.simple-post-link {
+  color: #0066cc !important;
+  text-decoration: underline !important;
+  font-size: 13px;
+  font-family: $font-heading;
+}
+
+.simple-post-link:hover,
+.simple-post-link:focus {
+  color: #004499 !important;
+  text-decoration: underline !important;
+}

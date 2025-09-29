@@ -1,0 +1,91 @@
+@include respond-to(tablet) {
+  #page {
+    width: 95%;
+    margin-top: 15px;
+  }
+
+  #titlebar h1 {
+    font-size: 12px;
+    padding-left: 18px;
+    margin-left: 3px;
+  }
+
+  #bar {
+    height: 39px;
+    min-height: 39px;
+    padding-left: 2px;
+  }
+
+  #bar ul {
+    flex-wrap: nowrap;
+    height: auto;
+  }
+
+  #bar ul li a,
+  #bar ul li a:visited {
+    padding: 3px 10px 5px;
+    font-size: 12px;
+  }
+
+  #main {
+    padding-left: 8px;
+    padding-right: 20px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  #main h1 {
+    font-size: 12px;
+  }
+
+  #main p {
+    padding-bottom: 0;
+  }
+}
+
+@include respond-to(mobile) {
+  #page {
+    width: 98%;
+    margin-top: 10px;
+  }
+
+  #titlebar h1 {
+    font-size: 11px;
+    padding-left: 20px;
+    margin-left: 2px;
+  }
+
+  #bar ul li a,
+  #bar ul li a:visited {
+    padding: 3px 8px 5px;
+    font-size: 11px;
+  }
+
+  #main {
+    padding-left: 8px;
+    padding-right: 15px;
+    font-size: 11px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@include respond-to(small) {
+  #bar {
+    padding: 5px 2px;
+  }
+}
+
+/* Footer override: ensure footer text and links are readable on top of background
+   This file is imported last, so these rules will override earlier declarations. */
+#footer > span,
+#footer > a,
+#footer > a:visited {
+  color: #333333 !important;
+  display: inline-block;
+  transform: translateY(-4px);
+  line-height: 1;
+}

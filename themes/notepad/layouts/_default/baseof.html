@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+<body>
+    <div id="page">
+        {{ partial "site-header.html" . }}
+
+        <main id="main">
+            {{ block "main" . }}{{ end }}
+        </main>
+
+        {{ partial "footer.html" . }}
+    </div>
+</body>
+</html>

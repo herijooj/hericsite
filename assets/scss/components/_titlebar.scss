@@ -1,0 +1,25 @@
+#titlebar {
+  height: 30px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  background:
+    url(../images/titlebar-left.png) no-repeat left top,
+    url(../images/titlebar-right.png) no-repeat right top,
+    url(../images/titlebar-center.png) repeat-x center top;
+}
+
+#titlebar h1 {
+  padding-left: 21px;
+  margin-top: 8px;
+  margin-left: 5px;
+  width: 510px;
+  position: relative;
+  color: #ffffff;
+  text-align: left;
+  font-size: 14px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  background-image: url(../images/icon.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}

@@ -1,0 +1,14 @@
+body {
+  background: $color-body-background url("../images/bc.jpg") no-repeat;
+}
+
+#page {
+  margin: 25px auto 0 auto;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  max-width: $layout-max-width;
+  min-width: $layout-min-width;
+  height: auto;
+}
