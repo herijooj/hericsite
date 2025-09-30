@@ -1,0 +1,10 @@
+{{- $page := . -}}
+{{- with $page.TranslationKey -}}
+    {{- . -}}
+{{- else -}}
+    {{- with $page.File -}}
+        {{- .Path -}}
+    {{- else -}}
+        {{- $page.RelPermalink -}}
+    {{- end -}}
+{{- end -}}
