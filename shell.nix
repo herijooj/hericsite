@@ -9,6 +9,7 @@ pkgs.mkShell {
     imagemagick    # for image optimization
     gifsicle       # for GIF optimization
     libwebp        # for WebP conversion
+    markdownlint-cli  # Markdown linter
   ];
 
   shellHook = ''
@@ -20,5 +21,6 @@ pkgs.mkShell {
     alias gstatus="git status"
     alias gpush="git push"
     alias gpull="git pull"
+    alias mlint="markdownlint '**/*.md'"
   '';
 }

@@ -32,10 +32,12 @@
             hugo
             git
             watchexec
+            markdownlint-cli
           ];
 
           shellHook = ''
             echo "Dev shell ready: $(hugo version)"
+            alias mlint="markdownlint '**/*.md'"
           '';
         };
       });

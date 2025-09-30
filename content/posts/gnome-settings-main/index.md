@@ -39,48 +39,50 @@ I gave up trying to customize stuff, i just use [MoreWaita](https://github.com/s
 
 # Extensions
 
-![](./scr/extensions.png)
+![Extensions screenshot](./scr/extensions.png)
 
 1. [Auto Activities](https://extensions.gnome.org/extension/5500/auto-activities/)
 
 This is kinda useless, but i like it. it opens the overview when there is no programs open.
 
-2. [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
+1. [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
 
 I use this to disable the screensaver when i am doing something where i don't touch the mouse for a long time. It also disables the screensaver when i am in fullscreen.
 
-3. [Custom Accent Colors](https://extensions.gnome.org/extension/5547/custom-accent-colors/)
+1. [Custom Accent Colors](https://extensions.gnome.org/extension/5547/custom-accent-colors/)
 
 I don't like much color, so i made everything gray.
 
-4. [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
+1. [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
 
 This is incredible, it works so well. I can have notifications, sync the clipboard, mute the computer when i get a call, control the music, send files and etc. I use it with KDEConnect on my phone.
 
-5. [GTK3 Theme Switcher](https://extensions.gnome.org/extension/5401/gtk3-theme-switcher/)
+1. [GTK3 Theme Switcher](https://extensions.gnome.org/extension/5401/gtk3-theme-switcher/)
 
 So when the night-theme kicks in, the GTK3 programs also change to the dark theme.
 
-6. [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
+1. [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
 
 This has everthing, i use to only show the top bar in the overview, make the dock slighly smaller and some other stuff.
 
-7. [No Titlebar When Maximized](https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized/)
+1. [No Titlebar When Maximized](https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized/)
 
 I use shortcuts to close, minimize and maximize programs, the titlebar is useless in programs like vscode.
 
-8. [Rounded Window Corners](https://extensions.gnome.org/extension/5237/rounded-window-corners/)
+1. [Rounded Window Corners](https://extensions.gnome.org/extension/5237/rounded-window-corners/)
 
 So that every window looks cute.
 
 # Extras
 
 ## Firefox Gnome Theme
+
 There is a theme for firefox that makes it look like Gnome Web, it's called [Firefox Gnome Theme](https://github.com/rafaelmardojai/firefox-gnome-theme), it also hides the tabs when there is only one open.
 
-![](./scr/firefox.png)
+![Firefox screenshot](./scr/firefox.png)
 
 ### Good Firefox Extensions
+
 i will throw some firefox extensions so that the feds can fingerprint me.
 
 - [Imagus](https://addons.mozilla.org/en-US/firefox/addon/imagus/)
@@ -94,12 +96,11 @@ i will throw some firefox extensions so that the feds can fingerprint me.
 
 ## Obsidian Adwaita Theme
 
-I use Obsidian for most of my stuff, there is [This](https://github.com/birneee/obsidian-adwaita-theme) theme for it, i also have a public Vault where i index Kanye West Music lyrics, you can check it [Here](https://github.com/herijooj/Kanye-Vault)
+I use Obsidian for most of my stuff, there is [This](https://github.com/birneee/obsidian-adwaita-theme) theme for it, i also have a public Vault where i index Kanye West Music lyrics, you can check it [here](https://github.com/herijooj/Kanye-Vault)
 
-![](./scr/myvault.png)
+![Obsidian vault screenshot](./scr/myvault.png)
 
-![](./scr/kanyevault.png)
-
+![Kanye vault screenshot](./scr/kanyevault.png)
 
 # Keybindings
 
