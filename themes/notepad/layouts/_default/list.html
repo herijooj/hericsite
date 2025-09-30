@@ -1,11 +1,39 @@
 {{ define "main" }}
     {{ .Content }}
     
-    {{ if .Pages }}
+    {{ $scratch := newScratch }}
+    {{ $scratch.Set "pages" (slice) }}
+    {{ $scratch.Set "keys" (slice) }}
+
+    {{ range .Pages }}
+        {{ $scratch.Add "pages" (slice .) }}
+        {{ $key := partial "helpers/fallback-key.html" . }}
+        {{ $scratch.Add "keys" (slice $key) }}
+    {{ end }}
+
+    {{ $sitesByWeight := sort site.Sites "Language.Weight" }}
+    {{ $defaultSite := index $sitesByWeight 0 }}
+    {{ $currentLang := .Site.Language.Lang }}
+
+    {{ if and (hugo.IsMultilingual) $defaultSite (ne $currentLang $defaultSite.Language.Lang) }}
+        {{ $section := .Section }}
+        {{ range where $defaultSite.RegularPages "Section" $section }}
+            {{ $key := partial "helpers/fallback-key.html" . }}
+            {{ if not (in ($scratch.Get "keys") $key) }}
+                {{ $scratch.Add "pages" (slice .) }}
+                {{ $scratch.Add "keys" (slice $key) }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{ $pages := $scratch.Get "pages" }}
+
+    {{ if $pages }}
+        {{ $pages = sort $pages "Date" "desc" }}
         <ul class="simple-post-list">
-            {{ range .Pages }}
+            {{ range $pages }}
                 <li>
-                    <a href="{{ .Permalink }}" class="simple-post-link">{{ .Title }}</a>
+                    <a href="{{ .RelPermalink }}" class="simple-post-link">{{ .Title }}</a>
                     {{ if .Date }}
                         <small style="color: #666; margin-left: 10px;">
                             ({{ .Date.Format "02/01/2006" }})

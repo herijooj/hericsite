@@ -3,7 +3,7 @@ title: "Home"
 translationKey: "home"
 ---
 
-Welcome to Heric's site.
+# Welcome to Heric's site.
 
 My name is Heric Camargo. I'm a Computer Science student at the Federal University of Paraná.
 

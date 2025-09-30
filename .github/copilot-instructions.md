@@ -1,0 +1,21 @@
+# Copilot Instructions for Heric's Hugo Site
+- Spin up the dev environment with `nix develop` (flakes) or `nix-shell`; `shell.nix` exposes aliases like `hserve` (=`hugo server -D`), `hbuild` (=`hugo`), and `hclean` to reset `public/`.
+- The production build is `hugo --minify`; GitHub Actions in `.github/workflows/hugo.yml` reproduces this and deploys the contents of `public/` to Pages on pushes to `main`.
+- Content is organized as bilingual page bundles under `content/`: English lives in files without suffix, Portuguese translations use `.pt-br.md`. Keep matching `translationKey` values so Hugo links translations correctly.
+- Create new entries via archetypes (`archetypes/posts.md`, `archetypes/projetos.md`), e.g. `hugo new --kind posts posts/my-slug/index.md`; the archetype front matter already includes fields like `gallery` and `technologies` expected by the theme.
+- Section landing pages rely on `_index.md` files (and `_index.pt-br.md`); list rendering is handled by `themes/notepad/layouts/_default/list.html`, which shows `.Pages` and dates formatted as `DD/MM/YYYY`.
+- The theme lives in `themes/notepad`. `layouts/_default/baseof.html` sets the frame, while `layouts/index.html`, `layouts/posts/single.html`, and `layouts/projetos/single.html` provide specialized blocks.
+- Hugo pipes compile styles from `assets/scss/main.scss` via `partials/head.html`. Organize new styles by adding partials under `assets/scss/components/` or `utilities/` and import them from `main.scss`.
+- Notepad chrome (title bar, menu, footer) is driven by partials in `themes/notepad/layouts/partials/`. Adjust the faux title bar text or localization fallback in `site-header.html`; tweak menus and the language switcher logic (which auto-detects translations) in `navigation.html`.
+- Static UI sprites (titlebar/menu backgrounds) live in `themes/notepad/static/images/`; user-facing media belongs in `static/` for global assets or inside each page bundle for processed resources.
+- Markdown images use a custom renderer at `layouts/_default/_markup/render-image.html`. Place image files alongside the content (`content/posts/<slug>/...`) so Hugo treats them as page resources and auto-generates responsive WebP variants.
+- Localization strings for UI labels are in `i18n/en.toml` and `i18n/pt-br.toml`. Add new `id`s here if partials reference `i18n` keys.
+- Navigation structure and site metadata are defined in `hugo.toml` (note language-specific menus). Update both language menus to keep labels in sync.
+- Nix packaging (`flake.nix`) builds the site by running `hugo --minify` and copying `public/` to `$out`; keep this in mind when changing build inputs or adding dependencies.
+- Treat `public/`, `resources/_gen/`, and `result/` as generated artifacts; avoid hand-editing them and clean before committing regenerated outputs.
+- `hugo.toml` sets `relativeURLs = true`; prefer shortcode-based links (`{{< relref "../path" >}}`) so output stays portable across base URLs.
+- Use the optional `titlebar` front matter field when a page needs a custom Notepad window title; otherwise `site-header.html` will synthesize one from `.Title` and localized defaults.
+- Date-sensitive templates expect valid `.Date` metadata. When creating Portuguese counterparts, keep the same `date` to avoid inconsistent ordering in `list.html`.
+- Front matter `slug` overrides (see `content/posts/tvbox/index.md`) control final URLs; mirror any custom slugs in translations to keep cross-links stable.
+- For ad-hoc live reload without Hugo's built-in watcher, the dev shell includes `watchexec`; pair it with `hugo` if you script bespoke pipelines.
+- Global assets like avatars or GIFs live under `static/`; reference them with absolute paths (e.g., `/gif1.gif`) since Hugo copies them verbatim to the site root.

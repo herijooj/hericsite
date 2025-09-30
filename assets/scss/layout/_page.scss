@@ -1,9 +1,14 @@
 body {
-  background: $color-body-background url("../images/bc.jpg") no-repeat;
+  background-color: $color-body-background;
+  background-image: url("../images/bc.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #page {
-  margin: 25px auto 0 auto;
+  margin: 25px auto 25px auto;
   display: block;
   position: relative;
   overflow: hidden;
@@ -11,4 +16,5 @@ body {
   max-width: $layout-max-width;
   min-width: $layout-min-width;
   height: auto;
+  padding-bottom: 40px;
 }
