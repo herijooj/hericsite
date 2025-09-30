@@ -4,6 +4,9 @@ public/
 # Generated files
 resources/_gen/
 
+# Nix build result
+result
+
 # Hugo build lock file
 .hugo_build.lock
 
