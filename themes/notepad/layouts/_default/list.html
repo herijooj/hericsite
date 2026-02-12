@@ -15,7 +15,7 @@
     {{ $defaultSite := index $sitesByWeight 0 }}
     {{ $currentLang := .Site.Language.Lang }}
 
-    {{ if and (hugo.IsMultilingual) $defaultSite (ne $currentLang $defaultSite.Language.Lang) }}
+    {{ if and (.Site.IsMultiLingual) $defaultSite (ne $currentLang $defaultSite.Language.Lang) }}
         {{ $section := .Section }}
         {{ range where $defaultSite.RegularPages "Section" $section }}
             {{ $key := partial "helpers/fallback-key.html" . }}

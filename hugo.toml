@@ -28,6 +28,11 @@ canonifyURLs = true
   tag = "tags"
   category = "categories"
 
+[markup]
+  [markup.highlight]
+    style = "friendly"
+    noClasses = true
+
 [languages]
 
   [languages.en]
